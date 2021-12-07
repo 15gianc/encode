@@ -1,0 +1,58 @@
+.headerSpacer {
+  flex: 1 1 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  margin: auto;
+}
+
+.bgHeader {
+  background-color: #383d38;
+}
+
+mat-form-field {
+  margin: 5px 0px;
+  font-size: 15px;
+  width: 300px;
+  padding: 6px;
+}
+
+.dropdown-item{
+  background-color: #383d38;
+}
+
+
+a:hover, a:active{
+  color: #B8E4F0;
+}
+
+.navbar{
+  background-color: #7267CB ;
+}
+
+
+
+ul li {
+  list-style:none;
+  display: inline-flex;
+  padding: 10px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.btn1{
+  background-color: #8c83cf ;
+  
+}
+
+.collapse{
+  display: inline-flex;
+  justify-content: flex-end;
+}

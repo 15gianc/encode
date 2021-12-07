@@ -1,0 +1,45 @@
+.bienvenida{
+  margin-top: 60px;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 30px;
+}
+.description{
+    font-size: 18px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+
+}
+
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 16px;
+    width: 600px;
+    margin-left: 280px;
+
+}
+
+.card{
+    min-width: 150px;
+    max-width: 100%;
+    width: 100%;
+    background-color: #a6a0d4;
+}
+mat-card-title{
+    margin-left: 220px;
+}
+
+
+.button{
+    width: 100%;
+    background-color: #ffffffc0;
+    color: black;
+}

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+     <a href=""><img width="210px" src="../../../assets/logo.jpg" alt="imgen"></a>
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <label class="boton"> ☰ </label>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="container-fluid">
+      <ul class="navbar-nav">
+        <!-- <li><a mat-flat-button class= "btn1" *ngIf="_userService.loggedIn()" aria-current="page" routerLink="listTask"> List Task </a></li>
+        <li><a mat-flat-button class= "btn1" *ngIf="_userService.loggedIn()" routerLink="saveTask"> Create Task</a></li>  -->
+        
+        <li class="nav-item">
+          <a mat-flat-button class="nav-link btn1" *ngIf="_userService.loggedIn() && !_userService.isAdmin()" routerLink="updateProfile">Update Profile</a>
+        </li>
+          <li><a mat-flat-button class= "btn1" *ngIf="!_userService.loggedIn()" routerLink="signUp"> Sign up </a></li>
+          <li><a mat-flat-button class= "btn1" *ngIf="!_userService.loggedIn()" routerLink="login"> Login </a></li>
+          <li><a mat-flat-button class= "btn1" *ngIf="_userService.loggedIn()" (click)="_userService.logout()"> Logout </a></li>
+
+
+        <li class="nav-item dropdown">
+          <a mat-flat-button class="btn1 nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="_userService.loggedIn() && _userService.isAdmin()">
+            Admin Options
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="btn1 dropdown-item" >Users</a></li>
+            <li><a class="btn1 dropdown-item" >Roles</a></li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</nav>

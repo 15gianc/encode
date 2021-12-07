@@ -1,0 +1,109 @@
+.containerfooter {
+    background-color: #7267CB;
+    width: 100%;
+    height: 34%;
+    display: inline-flex;
+    margin: auto;
+    text-align: center;
+    
+    padding-top: 20px;
+    padding-left: 5%;
+
+}
+.cl1{
+    position:absolute;
+    width:200px;
+    margin-top:-10px;
+    margin-left: 10px;
+    }
+.cl2{
+    margin-left:220px;
+    margin-right:20px;
+    margin-top: -5px;
+    width:200px;
+    }
+
+    .ubicacion{
+        margin-left: -5px;
+    }
+
+
+.ubicacion p {
+   margin-top: 20px;
+}
+.about p{
+    width: 400px;
+}
+
+
+.about {
+    padding-left: 13%;
+}
+
+.redes {
+    padding-left: 10%;
+}
+
+.redes h5{
+    margin-left: 2px;
+    width: 380px;
+}
+.redes a {
+    display: inline-flex;
+    color: #ffffff;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: transform 0.4s;
+
+}
+
+
+.redes a:hover {
+    transform: scale(1.3);
+}
+
+
+.team p{
+    margin-top: 10px;
+}
+
+.team{
+    display: flex;
+    margin-top: 6px;
+}
+
+#team1 a{
+    margin-left: 20px;
+}
+#team2 a{
+ margin-left: 30px;
+}
+
+#team5 a{
+    margin-left: 28px;
+}
+#team6 a{
+ margin-left: 16px;
+}
+.redes a.github {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTFSIO_dsJJiOX3Sntwxpw6lUIJKI0ueBlRpcQ3q57xVOw4-bCAQ2eX0v_5v2sf5CIiNA&usqp=CAU);
+background-size: 48px;
+width: 45px;
+height: 50px;
+}
+.redes{
+    width: 400px;
+}
+
+.footerfinal {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    color: black;
+    background-color: #7267CB;
+}
