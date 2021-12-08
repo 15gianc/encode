@@ -41,6 +41,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { UpdateProfileComponent } from './board/update-profile/update-profile.component';
+import { ChatComponent } from './components/chat/chat.component';
+
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -59,6 +64,7 @@ import { UpdateProfileComponent } from './board/update-profile/update-profile.co
     ListRoleComponent,
     UpdateRoleComponent,
     UpdateProfileComponent,
+    ChatComponent,
    
   ],
   imports: [
@@ -81,6 +87,10 @@ import { UpdateProfileComponent } from './board/update-profile/update-profile.co
     MatPaginatorModule,
     MatSortModule,
     DragDropModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRippleModule,
+
   ],
   providers: [
     UserService,

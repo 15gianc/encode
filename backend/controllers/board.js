@@ -13,6 +13,7 @@ const saveTask = async (req, res) => {
     description: req.body.description,
     taskStatus: "to-do",
     imageUrl: "",
+    task_date: req.body.task_date, 
   });
 
   const result = await boardSchema.save();

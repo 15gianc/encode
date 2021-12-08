@@ -44,28 +44,7 @@ const registerUser = async (req, res) => {
      res.status(400).send({ message: "Register error" });
   }
 
-  const sendEmail = (user) => {
-    let transporter = nodemailer.createTransport({
-      host: process.env.MAIL_HOST,
-      port: process.env.MAIL_PORT,
-      secure: false,
-      auth: {
-        user: process.env.MAIL_USERNAME,
-        pass: process.env.MAIL_PASSWORD,
-      },
-    });
-
-    return transporter.sendMail({
-      from: process.env.MAIL_ADMIN_ADDRESS,
-      to: req.body.email,
-      subject: "Welcome to Encode Task App",
-      html: `<p>Confirm Your Email: Confirm</p>`,
-    }).then(() => user)
-
-  }
   
-
-
 };
 
 const registerAdminUser = async (req, res) => {
@@ -134,6 +113,16 @@ const findUser = async (req, res) => {
     : res.status(200).send({ userfind });
 };
 
+const findUserNew = async (req, res) => {
+  const userfind = await user
+    .findById({ _id: req.user._id })
+    .populate("roleId")
+    .exec();
+  return !userfind
+    ? res.status(400).send({ message: "No search results" })
+    : res.status(200).send({ userfind });
+};
+
 const getUserRole = async (req, res) => {
   let userRole = await user
     .findOne({ email: req.params.email })
@@ -193,6 +182,43 @@ const updateUser = async (req, res) => {
     : res.status(200).send({ message: "User updated" });
 };
 
+const updateUserNew = async (req, res) => {
+  if (!req.body.name)
+    return res.status(400).send({ message: "Incomplete data" });
+
+  const searchUser = await user.findById({ _id: req.body._id });
+  if (req.body.email !== searchUser.email)
+    return res
+      .status(400)
+      .send({ message: "The email should never be changed" });
+
+      let pass = "";
+
+  if (req.body.password) {
+    const passHash = await bcrypt.compare(
+      req.body.password,
+      searchUser.password
+    );
+    if (!passHash) {
+      pass = await bcrypt.hash(req.body.password, 10);
+    } else {
+      pass = searchUser.password;
+    }
+  } else {
+    pass = searchUser.password;
+  }
+
+
+  const userUpdate = await user.findByIdAndUpdate(req.body._id, {
+    name: req.body.name,
+    password: pass
+  });
+
+  return !userUpdate
+    ? res.status(400).send({ message: "Error editing user" })
+    : res.status(200).send({ message: "User updated" });
+};
+
 const deleteUser = async (req, res) => {
   if (!req.body._id) return res.status(400).send("Incomplete data");
 
@@ -239,7 +265,9 @@ export default {
   listUsers,
   listAllUser,
   findUser,
+  findUserNew,
   updateUser,
+  updateUserNew,
   deleteUser,
   login,
   getUserRole,

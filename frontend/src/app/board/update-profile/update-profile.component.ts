@@ -37,30 +37,18 @@ export class UpdateProfileComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    this._Arouter.params.subscribe((params) => {
-      this._id = params['_id'];
-      this._userService.findUser(this._id).subscribe(
+  
+      this._userService.findUserNew().subscribe(
         (res) => {
           this.registerData = res.userfind;
           this.registerData.password = this.newPass;
           console.log(this.registerData);
-
-          this._roleService.listRole().subscribe(
-            (res) => {
-              this.roles = res.roleList;
-            },
-            (err) => {
-              this.message = err.error;
-              this.openSnackBarError();
-            }
-          );
         },
         (err) => {
           this.message = err.error;
           this.openSnackBarError();
         }
       );
-    });
   }
 
   updateProfile() {
@@ -68,7 +56,7 @@ export class UpdateProfileComponent implements OnInit {
       this.message = 'Failed process: Imcomplete data';
       this.openSnackBarError();
     } else {
-      this._userService.updateProfile(this.registerData).subscribe(
+      this._userService.updateUserNew(this.registerData).subscribe(
         (res) => {
           this._router.navigate(['/listTask']);
           this.message = 'Successfull edit user';
