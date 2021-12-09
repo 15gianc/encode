@@ -1,7 +1,7 @@
 <div class="bgComponent">
     <div class="container">
       <div class="example-button-container">
-        <button mat-mini-fab class="button" routerLink="/registerRole">
+        <button mat-raised-button class="button btnnew" routerLink="/registerRole">
           New Role
         </button>
       </div>
@@ -33,7 +33,7 @@
               <mat-icon
                 class="colorUpdate updateIcon"
                 [routerLink]="['/updateRole/', row._id]"
-                >border_color</mat-icon
+                >edit</mat-icon
               >
             </td>
           </ng-container>

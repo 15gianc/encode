@@ -1,12 +1,12 @@
 <div class="bgComponent">
   <div class="container">
     <div class="example-button-row">
-      <button mat-raised-button color="primary" routerLink="/registerUser">
+      <button mat-raised-button class="btnnew" routerLink="/registerUser">
         New user
       </button>
     </div>
     <mat-form-field class="bgShearch">
-      <mat-label>search User</mat-label>
+      <mat-label>Search User</mat-label>
       <input
         matInput
         (keyup)="applyFilter($event)"
@@ -43,12 +43,12 @@
             <mat-icon
               class="colorUpdate updateIcon"
               [routerLink]="['/updateUser/', row._id]"
-              >border_color</mat-icon
+              >Edit</mat-icon
             >
-            <mat-icon>maximize</mat-icon>
-            <mat-icon>maximize</mat-icon>
+            <mat-icon></mat-icon>
+            <mat-icon></mat-icon>
             <mat-icon class="colorDelete deleteIcon" (click)="deleteUser(row)"
-              >delete_forever</mat-icon
+              >delete</mat-icon
             >
           </td>
         </ng-container>

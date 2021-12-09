@@ -1,34 +1,17 @@
-.card1 h4{
-  display: flex;
-  justify-content: center;
+footer{
+  background-color: #7267CB ;
+  font-family: 'Fuzzy Bubbles', cursive;
+  margin-top: 10%;
 }
 
-
-.allCards {
-  display: inline-flex;
-  max-width: 100%;
-
+h5{
+  background-color: #aba3e6 ;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: black;
 }
 
-.developers {
-  display: inline-flex;
-
-}
-
-.card1 img{
-  margin-left: 160px;
-}
-
-.abc img{
-  display: flex;
-  justify-content: center;
-  margin-left: 55px ;
-}
-
-.card {
-  background-color: #7267CB;
-}
-
-h4{
-  font-weight: bold;
-}

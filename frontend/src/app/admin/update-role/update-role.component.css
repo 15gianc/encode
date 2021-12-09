@@ -4,15 +4,31 @@
 }
 
 .button {
-  width: 100%;
-  background-color: #3d3838;
+  margin-bottom: 10px;
+  background-color: #7267CB;
   color: white;
+  font-family: 'Fuzzy Bubbles', cursive;
+
+}
+
+.btn{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.button:hover{
+  background: #6E3CBC;
+
+
 }
 
 .card {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  font-family: 'Fuzzy Bubbles', cursive;
+
 }
 
 .form {
@@ -30,4 +46,9 @@
 
 mat-card-title {
   text-align: center;
+}
+
+mat-form-field{
+  font-family: 'Fuzzy Bubbles', cursive;
+
 }

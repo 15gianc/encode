@@ -6,7 +6,7 @@ const boardSchema = new mongoose.Schema({
   description: String,
   taskStatus: String,
   imageUrl: String,
-  task_date: Date,
+  task_date: Date, 
   registerDate: { type: Date, default: Date.now },
 });
 

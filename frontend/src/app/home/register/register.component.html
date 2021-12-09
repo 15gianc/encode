@@ -1,13 +1,11 @@
 <p class="bienvenida">¡Bienvenido a Encode TaskApp!</p>
 <p class="description">Tu aplicación para gestionar tus tareas diarias</p>
 
-
-
-
-<div class="container">
+<div class="bgComponent">
   <div class="form">
-    <mat-card class="card">
+    <mat-card class="card container-fluid">
       <mat-card-title>Register</mat-card-title>
+      <img src="../../../assets/login.jpg" width="150px" alt="">
       <mat-card-content>
         <div class="container">
           <mat-form-field>
@@ -21,24 +19,30 @@
           <mat-form-field>
             <input
               [(ngModel)]="registerData.email"
+              type="email"
               matInput
               placeholder="Email"
-              type="email"
               required
             />
           </mat-form-field>
           <mat-form-field>
-            <input 
+            <input
               [(ngModel)]="registerData.password"
+              type="password"
               matInput
               placeholder="Password"
-              type="password"
               required
             />
           </mat-form-field>
         </div>
       </mat-card-content>
-      <button class="button" mat-raised-button (click)="registerUser()"> Register </button>
+      <mat-card-actions>
+        <div class="container-fluid btn">
+          <div>
+        <button (click)="registerUser()" class="button" mat-raised-button>Register</button>
+      </div>
+      </div>
+      </mat-card-actions>
     </mat-card>
   </div>
 </div>

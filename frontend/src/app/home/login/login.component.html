@@ -1,6 +1,6 @@
 <div class="bgComponent">
   <div class="form">
-    <mat-card class="card">
+    <mat-card class="card container-fluid">
       <mat-card-title>Login</mat-card-title>
       <img src="../../../assets/login.jpg" width="150px" alt="">
       <mat-card-content>
@@ -26,7 +26,11 @@
         </div>
       </mat-card-content>
       <mat-card-actions>
-        <button (click)="login()" class="button" mat-raised-button>Go!!</button>
+        <div class="container-fluid btn">
+          <div>
+        <button (click)="login()" class="button" mat-raised-button>Get into</button>
+      </div>
+      </div>
       </mat-card-actions>
     </mat-card>
   </div>

@@ -33,6 +33,7 @@ a:hover, a:active{
 
 .navbar{
   background-color: #7267CB ;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
 
@@ -41,10 +42,12 @@ ul li {
   list-style:none;
   display: inline-flex;
   padding: 10px;
+  
 }
 
 li a {
   text-decoration: none;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
 .btn1{
@@ -52,7 +55,8 @@ li a {
   
 }
 
-.collapse{
-  display: inline-flex;
+.botones{
+  display: flex;
   justify-content: flex-end;
 }
+

@@ -5,7 +5,8 @@
   <label class="boton"> ☰ </label>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <div class="container-fluid">
+        <div class="container-fluid botones">
+          <div class="carta">
       <ul class="navbar-nav">
         <!-- <li><a mat-flat-button class= "btn1" *ngIf="_userService.loggedIn()" aria-current="page" routerLink="listTask"> List Task </a></li>
         <li><a mat-flat-button class= "btn1" *ngIf="_userService.loggedIn()" routerLink="saveTask"> Create Task</a></li>  -->
@@ -23,13 +24,14 @@
             Admin Options
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="btn1 dropdown-item" >Users</a></li>
-            <li><a class="btn1 dropdown-item" >Roles</a></li>
+            <li><a class="btn1 dropdown-item" routerLink="listUser" >Users</a></li>
+            <li><a class="btn1 dropdown-item" routerLink="listRole" >Roles</a></li>
 
           </ul>
         </li>
       </ul>
     </div>
+    </div>      
     </div>
   </div>
 </nav>

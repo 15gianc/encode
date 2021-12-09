@@ -2,6 +2,13 @@
 </app-chat>
 <div class="container">
   <div class="row">
+
+      <mat-card *ngIf="!isClosed" class="demo-inline-calendar-card">
+        <mat-calendar (selectedChange)="selected = $event"></mat-calendar>
+      </mat-card>
+      <div (click)="change()"  class="cardContainer-icon">
+      <img class="calendario" src="../../../assets/CALENDARIO.jpg" alt="calendario" width="50">
+      </div>
     <div class="example-container col">
       <h2>To do</h2>
 
@@ -20,8 +27,8 @@
                 <mat-expansion-panel hideToggle="false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                      <span>{{ item.name }}</span>
-                      <span class="spacer"></span>
+                      <span class="txt" >{{ item.name }}</span>
+                      <span class="spacer "></span>
                       <button
                         class="btnDone"
                         *ngIf="item.taskStatus == 'done'"
@@ -45,8 +52,11 @@
                       </button>
                     </mat-panel-title>
                   </mat-expansion-panel-header>
-                  <mat-panel-description>
+                  <mat-panel-description class="txt">
                     {{ item.description }}
+                  </mat-panel-description>
+                  <mat-panel-description>
+                    {{item.task_date}}
                   </mat-panel-description>
                   <mat-panel-description>
                     <img
@@ -54,7 +64,8 @@
                       src="{{ item.imageUrl }}"
                     />
                   </mat-panel-description>
-                  <mat-action-row>
+                  <mat-action-row class="containerb">
+                    <div>
                     <button
                       class="btnSelectTodo"
                       mat-button
@@ -77,9 +88,10 @@
                       done
                     </button>
                     <span class="spacer"></span>
-                    <mat-icon color="primary" (click)="deleteTask(item)"
+                    <mat-icon class="deletebtn" color="primary" (click)="deleteTask(item)"
                       >delete</mat-icon
                     >
+                  </div>
                   </mat-action-row>
                 </mat-expansion-panel>
               </mat-accordion>
@@ -106,7 +118,7 @@
                 <mat-expansion-panel hideToggle="false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                      <span>{{ item.name }}</span>
+                      <span class="txt">{{ item.name }}</span>
                       <span class="spacer"></span>
                       <button
                         class="btnDone"
@@ -131,8 +143,11 @@
                       </button>
                     </mat-panel-title>
                   </mat-expansion-panel-header>
-                  <mat-panel-description>
+                  <mat-panel-description class="txt">
                     {{ item.description }}
+                  </mat-panel-description>
+                  <mat-panel-description>
+                    {{item.task_date}}
                   </mat-panel-description>
                   <mat-panel-description>
                     <img
@@ -140,7 +155,8 @@
                       src="{{ item.imageUrl }}"
                     />
                   </mat-panel-description>
-                  <mat-action-row>
+                  <mat-action-row class="containerb">
+                    <div>
                     <button
                       class="btnSelectTodo"
                       mat-button
@@ -163,9 +179,10 @@
                       done
                     </button>
                     <span class="spacer"></span>
-                    <mat-icon color="primary" (click)="deleteTask(item)"
+                    <mat-icon  class="deletebtn" color="primary" (click)="deleteTask(item)"
                       >delete</mat-icon
                     >
+                  </div>
                   </mat-action-row>
                 </mat-expansion-panel>
               </mat-accordion>
@@ -193,7 +210,7 @@
                 <mat-expansion-panel hideToggle="false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                      <span>{{ item.name }}</span>
+                      <span class="txt">{{ item.name }}</span>
                       <span class="spacer"></span>
                       <button
                         class="btnDone"
@@ -218,8 +235,11 @@
                       </button>
                     </mat-panel-title>
                   </mat-expansion-panel-header>
-                  <mat-panel-description>
+                  <mat-panel-description class="txt">
                     {{ item.description }}
+                  </mat-panel-description>
+                  <mat-panel-description>
+                    {{item.task_date}}
                   </mat-panel-description>
                   <mat-panel-description>
                     <img
@@ -227,7 +247,8 @@
                       src="{{ item.imageUrl }}"
                     />
                   </mat-panel-description>
-                  <mat-action-row>
+                  <mat-action-row class="containerb">
+                    <div>
                     <button
                       class="btnSelectTodo"
                       mat-button
@@ -250,9 +271,10 @@
                       done
                     </button>
                     <span class="spacer"></span>
-                    <mat-icon color="primary" (click)="deleteTask(item)"
+                    <mat-icon class="deletebtn" color="primary" (click)="deleteTask(item)"
                       >delete</mat-icon
                     >
+                  </div>
                   </mat-action-row>
                 </mat-expansion-panel>
               </mat-accordion>
@@ -266,14 +288,14 @@
 
 <div class="contenedor">
   <div class="botones">
-    <button mat-mini-fab color="success" class="btn1">
+    <button mat-mini-fab  class="btn1">
       <a href="http://localhost:4200/listTask">
         <img src="../../../assets/ingredients-list.png"
       /></a>
     </button>
   </div>
   <div class="botones">
-    <button mat-mini-fab color="success" class="btn2">
+    <button mat-mini-fab  class="btn2">
       <a href="http://localhost:4200/saveTask"
         ><img src="../../../assets/plus-math--v1.png"
       /></a>

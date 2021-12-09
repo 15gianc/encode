@@ -15,8 +15,10 @@ export class ChatComponent implements OnInit {
   ];
 
   possibleAnswers = [
-    'Hola! Soy Enco. Tu asistente en Encode, ¿En qué te puedo ayudar?',
-    'Ahh, eso es sencillo. Para crear una lista, debes acceder al botón que se encuentra en la parte superior derecha. 😊',
+    '¡Hola! Soy Enco. Tu asistente en <Encode>, ¿En qué te puedo ayudar?',
+    'Eso es sencillo. Para crear una tarea, debes acceder al botón de "+" que se encunetra a tu izquierda. 😊',
+    'Puedes verla accediendo al boton con la imagen de una pequeña lista, se encuentra junto con el boton de crear una tarea.',
+    'Gracias a ti por usar <Encode> 💜'
   ];
 
   isClosed: boolean = true;
@@ -37,11 +39,25 @@ export class ChatComponent implements OnInit {
           texto: this.possibleAnswers[0],
         });
       }, 450);
-    } else {
+    } else if (this.mensajes.length < 5) {
       setTimeout(() => {
         this.mensajes.push({
           emisor: 'bot',
           texto: this.possibleAnswers[1],
+        });
+      }, 450);
+    } else if (this.mensajes.length < 7) {
+      setTimeout(() => {
+        this.mensajes.push({
+          emisor: 'bot',
+          texto: this.possibleAnswers[2],
+        });
+      }, 450);
+    } else {
+      setTimeout(() => {
+        this.mensajes.push({
+          emisor: 'bot',
+          texto: this.possibleAnswers[3],
         });
       }, 450);
     }

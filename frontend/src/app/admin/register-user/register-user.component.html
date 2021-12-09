@@ -1,7 +1,7 @@
 <div class="bgComponent">
   <div class="form">
     <mat-card class="card">
-      <div class="back" routerLink="/listUser"><mat-icon>clear</mat-icon></div>
+      <div class="back" routerLink="/listUser"><mat-icon>X</mat-icon></div>
       <mat-card-title>Register user</mat-card-title>
       <mat-card-content>
         <div class="container">
@@ -42,9 +42,11 @@
         </div>
       </mat-card-content>
       <mat-card-actions>
+        <div class="btn container-fluid">
         <button (click)="registerAdmin()" class="button" mat-raised-button>
           Register
         </button>
+      </div>
       </mat-card-actions>
     </mat-card>
   </div>

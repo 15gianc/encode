@@ -47,12 +47,15 @@ const saveTaskImg = async (req, res) => {
     }
   }
 
+
   const boardSchema = new board({
     userId: req.user._id,
     name: req.body.name,
     description: req.body.description,
     taskStatus: "to-do",
     imageUrl: imageUrl,
+    task_date: req.body.task_date
+
   });
 
   const result = await boardSchema.save();

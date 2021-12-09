@@ -4,15 +4,20 @@
   }
    
   .button {
-    width: 100%;
-    background-color: #3d3838;
-    color: white;
+    
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #ffffffc0;
+    color: #000000;
+    font-family: 'Fuzzy Bubbles', cursive;
   }
    
   .card {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+    background-color: #a6a0d4;
+
   }
    
   .form {
@@ -20,6 +25,7 @@
     justify-content: center;
     align-items: center;
     padding: 100px 16px 0px;
+    
   }
    
   .bgComponent {
@@ -30,9 +36,34 @@
    
   mat-card-title {
     text-align: center;
+    font-family: 'Fuzzy Bubbles', cursive;
   }
   
   .back{
     display: flex;
     justify-content: end;
+  }
+
+  mat-form-field{
+    font-family: 'Fuzzy Bubbles', cursive;
+  }
+
+  mat-label{
+    font-family: 'Fuzzy Bubbles', cursive;
+  }
+
+  .btn{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+  }
+
+  .card img{
+    margin-top: 10px;
+    margin-left: 160px;
+  }
+
+  .button:hover{
+  background-color: #b0a6fa;
+
   }

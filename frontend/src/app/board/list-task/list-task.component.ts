@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { BoardService } from '../../services/board.service';
 import {
   CdkDragDrop,
@@ -25,10 +26,16 @@ export class ListTaskComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
   durationInSeconds: number = 2;
+  selectedDate = new Date();
+  datePickerConfig = {}
+  selected = new Date();
+  isClosed: boolean = true;
 
   constructor(
     private _boardService: BoardService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+   
+
   ) {
     this.taskData = {};
     this.taskTodo = [];
@@ -103,6 +110,7 @@ export class ListTaskComponent implements OnInit {
     this._boardService.listTask().subscribe({
       next: (v) => {
         this.taskData = v.taskList;
+                
         this.taskData.forEach((tk: any) => {
           if (tk.taskStatus === 'to-do') {
             this.taskTodo.push(tk);
@@ -149,7 +157,10 @@ export class ListTaskComponent implements OnInit {
           this.taskData.splice(index, 1);
           this.message = v.message;
           this.openSnackBarSuccesfull();
+
         }
+       
+
       },
       error: (e) => {
         this.message = e.error.message;
@@ -158,6 +169,8 @@ export class ListTaskComponent implements OnInit {
       complete: () => console.info('complete'),
     });
   }
+
+  
 
   openSnackBarSuccesfull() {
     this._snackBar.open(this.message, 'X', {
@@ -176,4 +189,12 @@ export class ListTaskComponent implements OnInit {
       panelClass: ['style-snackBarFalse'],
     });
   }
+
+
+change() {
+  this.isClosed = !this.isClosed;
 }
+
+}
+
+
