@@ -55,9 +55,9 @@
                   <mat-panel-description class="txt">
                     {{ item.description }}
                   </mat-panel-description>
-                  <mat-panel-description>
-                    {{item.task_date}}
-                  </mat-panel-description>
+                   <mat-panel-description>
+                    {{formatDate(item.task_date)}}
+                  </mat-panel-description> 
                   <mat-panel-description>
                     <img
                       class="card-img-top image_center"
@@ -147,7 +147,7 @@
                     {{ item.description }}
                   </mat-panel-description>
                   <mat-panel-description>
-                    {{item.task_date}}
+                    {{formatDate(item.task_date)}}
                   </mat-panel-description>
                   <mat-panel-description>
                     <img
@@ -239,7 +239,7 @@
                     {{ item.description }}
                   </mat-panel-description>
                   <mat-panel-description>
-                    {{item.task_date}}
+                    {{formatDate(item.task_date)}}
                   </mat-panel-description>
                   <mat-panel-description>
                     <img

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as moment from 'moment';
 import { BoardService } from '../../services/board.service';
 import {
   CdkDragDrop,
@@ -34,7 +34,7 @@ export class ListTaskComponent implements OnInit {
   constructor(
     private _boardService: BoardService,
     private _snackBar: MatSnackBar,
-   
+    
 
   ) {
     this.taskData = {};
@@ -85,6 +85,8 @@ export class ListTaskComponent implements OnInit {
       this.dropUpdate();
     }
   }
+
+    
 
   updateTask(task: any, status: string) {
     let tempStatus = task.taskStatus;
@@ -194,6 +196,11 @@ export class ListTaskComponent implements OnInit {
 change() {
   this.isClosed = !this.isClosed;
 }
+
+formatDate(date: Date) {
+  return moment(date).format("DD/MM/YYYY")
+}
+
 
 }
 

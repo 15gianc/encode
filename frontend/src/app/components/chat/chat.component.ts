@@ -16,8 +16,8 @@ export class ChatComponent implements OnInit {
 
   possibleAnswers = [
     '¡Hola! Soy Enco. Tu asistente en <Encode>, ¿En qué te puedo ayudar?',
-    'Eso es sencillo. Para crear una tarea, debes acceder al botón de "+" que se encunetra a tu izquierda. 😊',
-    'Puedes verla accediendo al boton con la imagen de una pequeña lista, se encuentra junto con el boton de crear una tarea.',
+    'Eso es sencillo. Para crear una tarea, debes acceder al botón de "+" que se encuentra a tu izquierda. 😊',
+    'Puedes verla accediendo al boton con la imagen de una pequeña lista, se encuentra arriba de el boton de crear una tarea.',
     'Gracias a ti por usar <Encode> 💜'
   ];
 

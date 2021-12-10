@@ -16,6 +16,8 @@ const saveTask = async (req, res) => {
     task_date: req.body.task_date, 
   });
 
+
+
   const result = await boardSchema.save();
   return !result
     ? res.status(400).send({ message: "Error registering task" })
